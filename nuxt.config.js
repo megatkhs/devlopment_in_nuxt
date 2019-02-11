@@ -24,12 +24,14 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [{ src: '@/assets/css/style.scss', lang: 'sass' }],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: [
+    '~/plugins/mq.client'
+  ],
 
   /*
   ** Nuxt.js modules
@@ -38,9 +40,9 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
     '@nuxtjs/pwa'
   ],
+
   /*
   ** Axios module configuration
   */

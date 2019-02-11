@@ -1,0 +1,102 @@
+// Googleフォントを読み込む
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900');
+
+// 色の設定
+$color-main: #f3842f !default;
+$color-lab: #1bc9a3 !default;
+$color-white: #fff !default;
+$color-gray-light: #e4e4e4 !default;
+
+html {
+  font-size: 62.5%;
+  font-family: 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+html * {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+img, canvas {
+  vertical-align: middle;
+}
+
+// コンテナ
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+// レイアウト
+.l {
+  // ヒーローエリア
+  &-hero {
+    position: relative;
+    height: 300px;
+    margin-bottom: 10px;
+
+    // ヒーローエリア - ヘッダー
+    & &-head {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    // ヒーローエリア - ヘッダー
+    & &-body {
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    // ヒーローエリア - ヘッダー
+    & &-footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    // カラー
+    &.is {
+      &-main {
+        background-color: $color-main;
+        color: $color-white;
+      }
+
+      &-lab {
+        background-color: $color-lab;
+        color: $color-white;
+      }
+    }
+  }
+
+
+  // リスト要素
+  &-list {
+    li {
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid $color-gray-light;
+
+      a {
+        display: block;
+        height: 100%;
+        padding: 10px;
+        text-decoration: none;
+      }
+    }
+  }
+}
